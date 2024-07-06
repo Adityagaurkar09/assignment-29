@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java script </title>
+</head>
+<style>
+    .header{
+       text-align: center;
+    }
+    .input-text{
+        height: 300px;
+        width: 70%;
+        display: block;
+        margin: 2px auto;
+    }
+    .copy{
+        height: 150px;
+        margin: 50px 0px 0px 250px;
+    }
+    .button{
+     display: flex;
+     justify-content: space-around;
+    }
+    .btn-click{
+        height: 40px;
+        width: 130px;
+        border-radius: 15px;
+        font-size: 15px;
+    }
+
+</style>
+<body>
+    <div class="header">
+    <h1 class="heading">TEXT TOOL</h1>
+    <input type="text" class="input-text" id="input-text">
+</div>
+
+    <p id="copy-text" class="copy"></p>
+
+    <div class="button">
+
+    <button class="btn-click" onclick="giveActionREsult(`UPPERCASE`)">UPPERCASE</button>
+    <button class="btn-click" onclick="giveActionREsult(`lowecase`)">lowecase</button>
+    <button class="btn-click" onclick="giveActionREsult(`charcount`)">charecter count</button>
+    <button class="btn-click" onclick="giveActionREsult(`wcount`)">word count</button>
+</div>
+<script>
+
+function giveActionREsult (action){
+const inputElement = document.getElementById("input-text")
+const resultElement =  document.getElementById("copy-text")
+
+if(action == `UPPERCASE`)
+    resultElement.innerText = inputElement.value.toUpperCase()
+
+    else if (action == `lowecase`)
+        resultElement.innerText = inputElement.value.toLowerCase() 
+
+        else if (action == `charcount`)
+         resultElement.innerText = `Character Count : ${inputElement.value.length}`
+
+         else
+           resultElement.innerText = `Total Words : ${inputElement.value.split(" ").length}`
+
+}
+
+</script>
+</body>
+</html>
