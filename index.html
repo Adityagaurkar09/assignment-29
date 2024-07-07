@@ -30,6 +30,13 @@
         font-size: 15px;
     }
 
+    @media screen and (min-width: 600px) and (max-width: 768px){
+        .button  {
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-content: center;
+        }
+    }
 </style>
 <body>
     <div class="header">
@@ -46,6 +53,8 @@
     <button class="btn-click" onclick="giveActionREsult(`charcount`)">charecter count</button>
     <button class="btn-click" onclick="giveActionREsult(`wcount`)">word count</button>
 </div>
+
+
 <script>
 
 function giveActionREsult (action){
